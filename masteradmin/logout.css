@@ -1,0 +1,117 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+.back{
+    position: fixed;
+    height: 100vh;
+    fill: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    overflow: hidden;
+    
+}
+
+.container{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    align-items: flex-end;
+}
+
+.container span{
+    color: black;
+    text-transform: uppercase;
+    display: block;
+}
+
+.text1{
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+    animation: text 3s 1;
+}
+.text2{
+    font-size: 30px;
+    animation: text2 2s 1;
+
+}
+.redirecting{
+    position: fixed;
+    top: 85%;
+    left: 60%;
+    font-weight: 800;
+}
+
+
+#fire{
+    animation: fire 1s linear infinite alternate;
+    transform-origin: top;
+    transform-box: fill-box;
+}
+
+#plane{
+    animation: plane 1s linear infinite alternate;
+    transform-origin: bottom;
+    transform-box: fill-box;
+}
+#planet{
+    animation: planet 3s linear infinite alternate;
+}
+
+@keyframes fire{
+    from{
+        transform: rotateX(0deg);
+    }
+    to{
+        transform: rotateX(40deg);
+    }
+}
+
+@keyframes plane{
+    from{
+        transform: rotateX(0deg);
+    }
+    to{
+        transform: rotateX(20deg);
+    }
+}
+@keyframes planet{
+    from{
+        opacity: 0.2;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes text{
+    0%{
+        opacity: 0;
+        margin-bottom: -40px;
+    }
+    30%{
+        letter-spacing: 25px;
+        margin-bottom: -40px;
+    }
+    
+}
+@keyframes text2{
+    0%{
+        opacity: 0;
+    }
+    40%{
+        opacity: 0;
+    }
+}

@@ -1,0 +1,27 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Courgette', cursive;
+}
+
+
+
+.back{
+    position: fixed;
+    height: 100vh;
+    fill: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    overflow: hidden;
+    
+}
+.admin{
+    z-index: +1;
+    position: relative;
+    font-size: 1.5rem;
+
+}

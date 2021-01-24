@@ -1,0 +1,54 @@
+svg{
+    height: 100vh;
+}
+#fire{
+    animation: fire 1s linear infinite alternate;
+    transform-origin: top;
+    transform-box: fill-box;
+}
+
+#plane{
+    animation: plane 1s linear infinite alternate;
+    transform-origin: bottom;
+    transform-box: fill-box;
+}
+#planet{
+    animation: planet 1s linear infinite alternate;
+}
+#stars{
+    animation: stars .3s linear infinite alternate;
+}
+@keyframes fire{
+    from{
+        transform: rotateX(0deg);
+    }
+    to{
+        transform: rotateX(40deg);
+    }
+}
+
+@keyframes plane{
+    from{
+        transform: rotateX(0deg);
+    }
+    to{
+        transform: rotateX(20deg);
+    }
+}
+@keyframes planet{
+    from{
+        opacity: 0.2;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes stars{
+    from{
+        opacity: 0.2;
+    }
+    to{
+        opacity: 1;
+    }
+}

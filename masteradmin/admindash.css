@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+
+
+.back{
+    position: fixed;
+    height: auto;
+    fill: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    z-index: -1;
+}
+.admin_dash{
+    position: relative;
+    height: 15vh;
+    width: 100%;
+    padding: 1%;
+    font-size: 1.2rem;
+    font-weight: 800;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-items: center;
+    justify-items: center;
+    padding-top: 5%;
+    font-family: 'Nova Flat', cursive;
+}
+.admin_dash h1{
+    justify-self: self-end;
+}
+.admin_dash img{
+    height: 270%;
+    justify-self: flex-start;
+}
+

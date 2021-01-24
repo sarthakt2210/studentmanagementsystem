@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="teacheradd.css">
+    <link rel="stylesheet" href="../admin_nav.css">
+    <script src="https://kit.fontawesome.com/64d58efce2.js"
+    crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <img src="../img/teacheraddback.jpg" class='back' alt="">
+    <div class="nav_bar_admin">
+      <div class="admin_logged">
+          <h1 class='admin_log_nav'><?php echo $_SESSION['user'];?></h1>
+          <button class="logout">LOGOUT</button>
+      </div>
+      <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">MY ACCOUNT</a></li>
+        <div class="active_link">
+          <li><a href="#">ADD TEACHER</a></li>
+        </div>
+        <li><a href="#">MANAGE TEACHERS</a></li>
+      </ul>
+    </div>
+    <div class="container">
+      <div class="img">
+        <img  src="../img/teacher_back.svg" alt="">
+      </div>
+      <div class="addteach">
+        <form action="../index.html">
+          <img src="../img/teacher.svg" class="avatar" alt="">
+          <h2>NEW TEACHER</h2>
+          <div class="input-div">
+            <div class="i">
+              <i class="fas fa-user-plus"></i>
+            </div>
+            <div>
+              <h5>TEACHER NAME</h5>
+              <input type="text" class="name">
+            </div>
+          </div>
+          <div class="input-div">
+            <div class="i">
+              <i class="fas fa-unlock-alt"></i>
+            </div>
+            <div>
+              <h5>password</h5>
+              <input type="text" class="password">
+            </div>
+          </div>
+          <div class="input-div">
+            <div class="i">
+              <i class="fas fa-sort-numeric-up-alt"></i>
+            </div>
+            <div>
+              <h5>AGE</h5>
+              <input type="text" class="age">
+            </div>
+          </div>
+          <div class="input-div">
+            <div class="i">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <div>
+              <h5>PHONE NUMBER</h5>
+              <input type="text" class="phno">
+            </div>
+          </div>
+          <div class="input-div">
+            <div class="i">
+              <i class="fas fa-at"></i>
+            </div>
+            <div>
+              <h5>EMAIL ID</h5>
+              <input type="text" class="email">
+            </div>
+          </div>
+          <input type="submit" class='btn' value='addnew'>
+        </form>
+      </div>
+    </div>
+    <script>
+      const inputs = document.querySelectorAll('input');
+
+      function focusfunc(){
+          let t = this.parentNode.parentNode;
+          t.classList.add('focus');
+      }
+
+      function blurfunc(){
+          let t = this.parentNode.parentNode;
+          if(this.value ==""){
+            t.classList.remove('focus');
+          }
+          
+      }
+
+
+
+      inputs.forEach(input =>{
+          input.addEventListener('focus', focusfunc);
+          input.addEventListener('blur', blurfunc);
+      });
+    </script>
+</body>
+</html>
